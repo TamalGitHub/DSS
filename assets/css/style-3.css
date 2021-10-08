@@ -71,43 +71,44 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 15px 0;
-  background: #012970;
+  background-color: #f3f8fa;
   min-height: 40px;
-  margin-top: 82px;
-  color: #fff;
 }
-@media (max-width: 992px) {
-  .breadcrumbs {
-    margin-top: 57px;
-  }
-}
+
 .breadcrumbs h2 {
   font-size: 28px;
-  font-weight: 500;
+  font-weight: 300;
 }
+
 .breadcrumbs ol {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  padding: 0 0 10px 0;
+  padding: 0;
   margin: 0;
-  font-size: 14px;
 }
-.breadcrumbs ol a {
-  color: #fff;
-  transition: 0.3s;
-}
-.breadcrumbs ol a:hover {
-  text-decoration: underline;
-}
+
 .breadcrumbs ol li + li {
   padding-left: 10px;
 }
+
 .breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
-  color: #8894f6;
+  color: #6c757d;
   content: "/";
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs .d-flex {
+    display: block !important;
+  }
+  .breadcrumbs ol {
+    display: block;
+  }
+  .breadcrumbs ol li {
+    display: inline-block;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -733,6 +734,36 @@ section {
 .services .service-box.orange:hover {
   background: #f68c09;
 }
+
+/**/
+.services .service-box.yellow {
+  border-bottom: 3px solid #f6e609;
+}
+.services .service-box.yellow .icon {
+  color: #f6e609;
+  background: #fde3c4;
+}
+.services .service-box.yellow .read-more {
+  color: #f6e609;
+}
+.services .service-box.yellow:hover {
+  background: #f6e609;
+}
+
+.services .service-box.sblue {
+  border-bottom: 3px solid #09f6f6;
+}
+.services .service-box.sblue .icon {
+  color: #09f6f6;
+  background: #fde3c4;
+}
+.services .service-box.sblue .read-more {
+  color: #09f6f6;
+}
+.services .service-box.sblue:hover {
+  background: #09f6f6;
+}
+/**/
 .services .service-box.green {
   border-bottom: 3px solid #08da4e;
 }
