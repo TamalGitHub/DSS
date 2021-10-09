@@ -116,7 +116,7 @@
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="form-row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:10" data-msg="Please enter at least 10 chars" />
                   <div class="validate"></div>
                 </div>
                 <div class="col-md-6 form-group">
@@ -124,12 +124,18 @@
                   <div class="validate"></div>
                 </div>
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                <div class="validate"></div>
+              <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:10" data-msg="Please enter at least 10 chars of subject" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="number" class="form-control" name="mobile" id="mobile" placeholder="Your Mobile" data-rule="minlen:10" data-msg="Please enter a valid mobile number" />
+                  <div class="validate"></div>
+                </div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <textarea class="form-control" name="message" id="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
@@ -232,10 +238,7 @@
         &copy; Copyright <strong><span>Moderna</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/ -->
+
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
@@ -257,7 +260,16 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+<!-- <script>
+  jQuery.ajax({
+    url:'send_message.php',
+    type:'post',
+    data:'name='+name+'&email='+email+'&mobile='+mobile+'&subject='+subject+'&message='+message,
+    success:function(result){
+      alert(result);
+    }
+  });
+</script> -->
 </body>
 
 </html>
