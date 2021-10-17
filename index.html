@@ -32,8 +32,90 @@
   <link href="assets/vendor/aos-2/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <link href="assets/css/style-3.css" rel="stylesheet">
+  <link href="assets/css/neon.css" rel="stylesheet">
 
- 
+ <style>
+   .flip-box {
+  /* background-color: transparent;
+  width: 50px;
+  height: 30px; 
+   border: 1px solid #f1f1f1; */
+   text-indent: 50px;
+   letter-spacing: 25px;
+  font-size: 24px;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 10px;
+}
+.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    border-radius: 16px;
+}
+.btn-warning {
+    color: #fff;
+    background-color: #f7e70e;
+    border-color: #e5f50e;
+    border-radius: 16px;
+}
+
+
+* {
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.zoom {
+  padding: 10px;
+  background-color: green;
+  transition: transform .2s;
+  width: 50px;
+  height: 40px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.zoom:hover {
+  -ms-transform: scale(2); /* IE 9 */
+  -webkit-transform: scale(2); /* Safari 3-8 */
+  transform: scale(2);
+  background-color: yellow;
+  color: black;
+}
+ </style>
 </head>
 
 <body>
@@ -43,12 +125,24 @@
     <div class="container">
 
       <div class="logo float-left">
-        <h1 class="text-light"><a href="index.html"><span> DSS </span></a></h1>
+        <!-- <div class="flip-box"> 
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <button class="btn-success">DSS</button>
+            </div>
+            <div class="flip-box-back">
+              <button class="btn-warning">DSS</button>
+            </div>
+          </div>
+        </div> -->
+        <p class="text-light"><a href="index.html" class="neon-button"> DSS </a></p>
+        
+        
         
       </div>
 
       <nav class="nav-menu float-right d-none d-lg-block">
-        <ul>
+        <ul><li><div class="zoom">DSS</div></li>
           <li class="active"><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="services.html">Services</a></li>
@@ -67,33 +161,36 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Welcome to <span>DSS</span></h2>
-          <p class="animate__animated animate__fadeInUp">Creating Core Value through synergy of processes and actions ,</p>
-          <!-- <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a> -->
+          <!-- <h2 class="animate__animated animate__fadeInDown">Welcome to <span>DSS</span></h2>
+          <p class="animate__animated animate__fadeInUp">Creating Core Value through synergy of processes and actions ,</p> -->
+          <!-- <a href="" class="btn-get-started animate__animated animate__fadeInUp">
+            <h1> WELCOME TO DSS CONSULTANCY</h1></a> -->
         </div>
       </div>
 
       <!-- Slide 2 -->
       <div class="carousel-item">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">DSS CONSULTANCY AND MANAGEMENT SERVICES</h2>
-          <p class="animate__animated animate__fadeInUp">Enrichment of Culture, Human Capital, Organisational Goals,</p>
-          <!-- <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a> -->
+          <!-- <h2 class="animate__animated animate__fadeInDown">DSS CONSULTANCY AND MANAGEMENT SERVICES</h2>
+          <p class="animate__animated animate__fadeInUp">Enrichment of Culture, Human Capital, Organisational Goals,</p> -->
+          <!-- <a href="" class="btn-get-started animate__animated animate__fadeInUp">
+            <p> WELCOME TO DSS CONSULTANCY</p></a> -->
         </div>
       </div>
 
       <!-- Slide 3 -->
       <div class="carousel-item">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown"> SERVICES OFFERED BY DSS </h2>
-          <p class="animate__animated animate__fadeInUp">Creating Core Value through synergy of processes and actions ,
+        <!--  <h2 class="animate__animated animate__fadeInDown"> SERVICES OFFERED BY DSS </h2>
+           <p class="animate__animated animate__fadeInUp">Creating Core Value through synergy of processes and actions ,
             Enrichment of Culture, Human Capital, Organisational Goals.
-            Improvement of Processes, Resources and Financial Services.</p>
-          <!-- <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a> -->
+            Improvement of Processes, Resources and Financial Services.</p> -->
+          <!-- <a href="" class="btn-get-started animate__animated animate__fadeInUp">
+            <p> WELCOME TO DSS CONSULTANCY</p></a> -->
         </div>
       </div>
 
-      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+      <!-- <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
@@ -101,7 +198,7 @@
       <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
         <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
-      </a>
+      </a> -->
 
     </div>
   </section><!-- End Hero -->
@@ -114,8 +211,9 @@
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <!-- <h2>Services</h2>
-          <p>Veritatis et dolores facere numquam et praesentium</p> -->
+          <p> WELCOME TO DSS CONSULTANCY</p>
+           <!--<h2>Services</h2>-->
+          <p>SERVICES</p> 
         </header>
 
         <div class="row gy-4">
@@ -123,37 +221,28 @@
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-box blue">
               <i class="ri-dribbble-line icon"></i>
-              <h3> Consulting services </h3>
-              <p>DSS provides top consulting talent quickly...</p>
-              <a href="services.html" class="read-more" ><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              <h4> Creating Core Value through synergy of processes and actions</h4>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-box orange">
               <i class="ri-file-text-line icon"></i>
-              <h3> Full-time employees </h3>
-              <p>We provide the best possible...
-              <a href="services.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"> </i>
-            </a>
+              <h5> Enrichment of Culture, Human Capital, Organisational Goals, Improvment of Processes </h5>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="service-box green">
               <i class="ri-dashboard-3-line icon"></i>
-              <h3> Temp-to-perm hires </h3>
-              <p>You need to fill...</p>
-              <a href="services.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              <h4> Resources and Financial Services </h4>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
             <div class="service-box red">
               <i class="ri-global-line icon"></i>
-              <h3> Outsourcing of all Training </h3>
-              <p>Human Resources Development... </p>
-              <a href="services.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              <h5> Yet to Come </h5>
             </div>
           </div>
 
@@ -210,7 +299,7 @@
       <div class="container">
 
         <div class="section-title">
-          <div class="col-12 text-center"><h2><p class="font-italic"> SYNOPSYS  </p></h2></div>
+          <div class="col-12 text-center"><h2><p class="font-italic"> WHY CHOOSE DSS CONSULTANCY  </p></h2></div>
         </div>
 
         <div class="row" data-aos="fade-up">
@@ -229,7 +318,7 @@
             <img src="assets/img/features-2.svg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 pt-5 order-2 order-md-1">
-            <ul> <li><h3><i class="icofont-check"></i><a href="services.html"> Full-time employees </a></h3></li> </ul>
+            <ul> <li><h3><i class="icofont-check"></i><a href="services.html"> Consulting services </a></h3></li> </ul>
             <p class="font-italic">  Our group  is a Training  and Consultancy Service Provider having their registered office in Kolkata. The Group has an immensely successful team in creating a network of highly adept intelligent workforce that can help a company achieve their mission-critical projects and goals. Our team is formed by a group of highly qualified and experienced, result oriented, and dynamic Sales, Marketing, Engineering and HR professionals, each of them having more than 30 years’ of working exposure with big public sector undertaking, and multinational organisations. </p>
           </div>
         </div>
@@ -239,8 +328,13 @@
             <img src="assets/img/features-3.svg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 pt-5">
-            <ul> <li><h3><i class="icofont-check"></i><a href="services.html"> Temporary/Permanenet hires </a></h3></li> </ul>
-            <p class="font-italic">You need to fill a role but before that you want to be doubly sure that it’s the right fit. No problem at all, we provide temp-to-hire resources who can work for you on a short term contract. If everything goes well they can be hired as a fulltime resource.</p>
+           <h3><a href="services.html"> WE CAN PROVIDE THE FOLLOWING SERVICES IN AREAS OF OUR SPECIALISATION </a></h3>
+           <ul><li><h5><i class="icofont-check"></i>HR Compliance Services</li> 
+             <li><h5><i class="icofont-check"></i> Financial Compliance Services</li>
+             <li><h5><i class="icofont-check"></i> Audit</li>
+             <li><h5><i class="icofont-check"></i> On line services for statutory Returns</li>
+             <li><h5><i class="icofont-check"></i> Data Base Management and Record Administration/Maintenance</li>
+              </ul>
           </div>
         </div>
 
@@ -249,13 +343,46 @@
             <img src="assets/img/features-4.svg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 pt-5 order-2 order-md-1">
-            <ul> <li><h3><i class="icofont-check"></i><a href="services.html"> Outsourcing of all Training </a></h3></li> </ul>
-            <p class="font-italic">
-              Human Resources Development as well as organisational Interventional activities. 
-            </p>
-            <p>
-              Human Resources Development as well as organisational Interventional activities. 
-            </p>
+            <ul><li><h5><i class="icofont-check"></i> Statutory Registrations</li>
+              <li><h5><i class="icofont-check"></i> Drafting and Conveyancing.</li>
+              <li><h5><i class="icofont-check"></i> Payroll Processing and HR Accounting</li>
+              <li><h5><i class="icofont-check"></i> Support Services for Outsourced Personnel.</li>
+              <li><h5><i class="icofont-check"></i> Human Resource Consulting.</li>
+              <li><h5><i class="icofont-check"></i> Training and Management Development Programme.</li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5">
+            <img src="assets/img/features-1.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-4">
+            <ul> 
+              <li><h5><i class="icofont-check"></i> Compliance Services on relevant Labour Laws applicable for industry.</h5></li>
+              <li><h5><i class="icofont-check"></i> Recruitment and Selection.</h5></li>
+              <li><h5><i class="icofont-check"></i> Career Counseling and Soft Skill Development Programme.</h5></li>
+              <li><h5><i class="icofont-check"></i> Legal Aid Services.</h5></li>
+              <li><h5><i class="icofont-check"></i> Conducting Domestic Enquiry and Handling in-house Grievances</h5></li>
+              <li><h5><i class="icofont-check"></i> Outsourcing of all Training, Human Resources Development as well as Organisational Interventional activities.</h5></li>
+          </ul>
+          </div>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5 order-1 order-md-2">
+            <img src="assets/img/features-2.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5 order-2 order-md-1">
+            <ul> 
+            <li><h5><i class="icofont-check"></i>Outsourcing of all Training, Human Resources Development as well as Organisational Interventional activities.</h5></li>
+            <li><h5><i class="icofont-check"></i> HR Initiatives and Personnel Administration.</h5></li>
+            <li><h5><i class="icofont-check"></i> Implementation of Talent Management Processes.</h5></li>
+            <li><h5><i class="icofont-check"></i> Implementation of Performance Management System.</h5></li>
+            <li><h5><i class="icofont-check"></i> Competency Mapping and Objective Setting Process </h5></li>
+            <li><h5><i class="icofont-check"></i> Learning Enhancement Programme</h5></li>
+            <li><h5><i class="icofont-check"></i> Any other activities in relation to the above</h5></li> </ul>
           </div>
         </div>
 
@@ -311,26 +438,25 @@
 
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contact Us</h4>
-            <p>
-              19, Ganguly Bagan East Road, <br>
-              Kolkata 700 084, <br>
-              India <br><br>
+            <p>BB-94, Sarat Park, Kasba, Kolkata 700107
+              Near Acropolis Mall and Geetanjali Stadiium <br>
+              India 
               <strong>Phone:</strong> +033 24623294<br> +91 94330 12658
               <strong>Email:</strong> dss.cosnsultants@gmail.com<br>
             </p>
 
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-info">
-            <h3> About Dss Consultancy And Management Services Private Limited </h3>
-            <p> Dss Consultancy And Management Services Private Limited was registered on 01 May, 2007. Dss Consultancy And Management Services Private Limited. </p>
-            <div class="social-links mt-3">
+          <!-- <div class="col-lg-3 col-md-6 footer-info">
+            <h3> Dss Consultancy And Management Services Private Limited </h3>
+             <p>  Dss Consultancy And Management Services Private Limited. </p> -->
+            <!-- <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
               <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
               <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div>
-          </div>
+            </div> 
+          </div> -->
 
         </div>
       </div>
