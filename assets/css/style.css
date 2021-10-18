@@ -2263,32 +2263,6 @@ section {
   color: #fff;
 }
 
-#footer .footer-top .footer-info .container { margin: 150px auto; max-width: 960px; }
-.container ul,.container li {
-  padding: 0;
-  list-style-type: none;
-  margin: 0;
-}
-.container li {
-  padding: 10px;
-  list-style-type: none;
-  margin: 0;
-   letter-spacing: 5px;
-}
-
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.data-list {
-  height: 220px;
-  width: 300px;
-  padding: 2rem;
-  overflow-y: hidden;
-  border: 2px solid #222;
-  border-radius: 5px;
-}
-
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
@@ -2379,3 +2353,4 @@ section {
 #footer .credits a {
   color: #a2cce3;
 }
+
