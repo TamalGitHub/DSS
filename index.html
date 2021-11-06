@@ -32,8 +32,50 @@
   <link href="assets/vendor/aos-2/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
    <link href="assets/css/style-box-homepage.css" rel="stylesheet">
-  <link href="assets/css/neon.css" rel="stylesheet">
 
+   
+    <style>
+    /*  -- SCROLL DOWN STYLE */
+          .scroll-down.arrow span {
+          position: absolute;
+          display: inline-block;
+          top: 20px;
+          height: 30px;
+          width: 2px;
+          left: calc(50% - 1px);
+          animation: animateArrow 1.5s infinite linear;
+        }
+        @keyframes animateArrow {
+          0% {
+            transform: translateY(0);
+          }
+          100% {
+            transform: translateY(40px);
+            opacity: 0;
+          }
+        }
+        .scroll-down.arrow span::before,
+        .scroll-down.arrow span::after {
+          position: absolute;
+          content: "";
+          width: 3px;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: rgb(8, 8, 8);
+          border-radius: 3px;
+        }
+        .scroll-down.arrow span::before {
+          transform-origin: bottom;
+          transform: rotate(-45deg);
+        }
+        .scroll-down.arrow span::after {
+          transform-origin: bottom;
+          margin-left: -1px;
+          transform: rotate(45deg);
+        }
+    </style>
+    
 </head>
 
 <body>
@@ -54,9 +96,6 @@
           </div>
         </div> -->
         <p class="text-light"><a href="index.html"> DSS </a></p>
-        
-        
-        
       </div>
 
       <nav class="nav-menu float-right d-none d-lg-block">
@@ -80,10 +119,14 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <!-- <h2 class="animate__animated animate__fadeInDown">Welcome to <span>DSS</span></h2>
-          <p class="animate__animated animate__fadeInUp">Creating Core Value through synergy of processes and actions ,</p> -->
-          <!-- <a href="" class="btn-get-started animate__animated animate__fadeInUp">
-            <h1> WELCOME TO DSS CONSULTANCY</h1></a> -->
+          <div class="card bg2">
+            <!-- <p class="card__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem optio unde in libero expedita illo dolore, vero nemo
+            at rem nobis assumenda cum quo quaerat aperiam, vel minus maiores fuga.</p> -->
+          </div>
+          <a href="javascript:window.scrollTo(0, 500);" class="scroll-down arrow">
+            <label>Scroll Down For More Details</label>
+            <span></span>
+       </a>
         </div>
       </div>
 
@@ -120,7 +163,6 @@
       </a> -->
 
     </div>
-    <p> WELCOME TO DSS CONSULTANCY</p>
   </section><!-- End Hero -->
 
   <main id="main">

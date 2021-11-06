@@ -13,6 +13,10 @@ a {
   text-decoration: none;
 }
 
+a.scroll-down.arrow {
+  color: black;
+}
+
 a:hover {
   color: #717ff5;
   text-decoration: none;
